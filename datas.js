@@ -16,10 +16,20 @@ const instructions = {
         { giveDeviceToNextPlayer: "Donnez l'appareil au joueur sur votre gauche."},
         { announceStartingPlayer1: "C'est "}, // message type "C'est `nomJoueur` qui commence."
         { announceStartingPlayer2: " qui commence."}, // giveStartingPlayer1 + playerName + giveStartingPlayer2
-        { MrWhiteGuess: "Sa capacité entre en jeu ! Il peut tenter de deviner quel mot était le bon pour voler la victoire : "}, // entrée texte de l'utilisateur, passable en appuyant sur "skip"
+        { getEliminatedPlayer: "Sélectionnez le joueur éliminé après le vote : "},
+        { confirmEliminatedPlayer: "Confirmez-vous ?"},
+        { gameContinues: "La partie continue."},
+        { MrWhiteGuess: "Sa capacité entre en jeu : il peut tenter de deviner quel mot était le bon pour voler la victoire : "}, // entrée texte de l'utilisateur, passable en appuyant sur "skip"
         { eliminatedCivilian: " est éliminé. C'était un civil..."}, // message type "`nomJoueur` est éliminé..."
         { eliminatedUndercover: " est éliminé. C'était un undercover !"}, // playerName + eliminatedRole
         { eliminatedMrWhite: " est éliminé. C'était Mr. White !"},
+        { gameEnded: "La partie est terminée !"},
+        { winCivilians: "Ce sont les civils qui en sortent vainqueurs !"},
+        { winUndercovers: "Les undercovers ont su rester discrets !"},
+        { winMrWhiteGuessed: "Mr. White remporte la partie après avoir deviné le mot secret !"},
+        { winMrWhiteSurvived: "Mr. White remporte la partie après avoir sur se faire discret !"},
+        { MrWhiteFailGuess: "Mr. White n'a pas trouvé le mot secret..."},
+        { winImpostors: "Tous les civils sont éliminés, les imposteurs l'emportent !"},
         { rules: "Voici le déroulement d'une partie :\nLes joueurs entrent à tour de rôle leur nom dans l'application. "+
                 "Suite à cela, les rôles sont désignés aléatoirement et gardés secret aux yeux des participants.\n"+
                 "Parmi ces rôles figurent :\nCivil : il connait son mot mais ne sait pas si il est civil ou undercover. Il doit éliminer tous les imposteurs.\n"+
@@ -46,10 +56,20 @@ const instructions = {
         { giveDeviceToNextPlayer: "Give the device to the player on your left."},
         { announceStartingPlayer1: ""},
         { announceStartingPlayer2: " starts the game."},
-        { MrWhiteGuess: "His ability activates ! He can try to steal the victory by guessing the word : "},
-        { eliminatedCivilian: " is eliminated. C'était un civil..."},
-        { eliminatedUndercover: " is eliminated. C'était un undercover !"},
-        { eliminatedMrWhite: " is eliminated. C'était Mister White !"},
+        { getEliminatedPlayer: "Select the eliminated player after the vote: "},
+        { confirmEliminatedPlayer: "Do you confirm?"},
+        { gameContinues: "The game continues."},
+        { MrWhiteGuess: "His ability activates: he can try to steal the victory by guessing the word: "},
+        { eliminatedCivilian: " is eliminated. A civil unfortunatly..."},
+        { eliminatedUndercover: " is eliminated. He was an undercover!"},
+        { eliminatedMrWhite: " is eliminated. He was Mr. White!"},
+        { gameEnded: "The game is now finished!"},
+        { winCivilians: "The civilians got rid of the impostors!"},
+        { winUndercovers: "The undercovers managed to stay undetected!"},
+        { winMrWhiteGuessed: "Mr. White found the secret word, he wins the game!"},
+        { winMrWhiteSurvived: "Mr. White survived until the end!"},
+        { MrWhiteFailGuess: "Mr. White failed to guess the secret word..."},
+        { winImpostors: "All the civilians were eliminated, impostors win!"},
         { rules: "Here is how a game goes:\nPlayers start by typing their name on the application. "+
                 "Roles are then randomly assigned to each player, kept secret from them.\n"+
                 "The existing roles are as follows:\nCivilian: he knows his word but doesn't know whether he is a civilian or an undercover. His job is to eliminate all impostors\n"+
@@ -66,4 +86,9 @@ const instructions = {
                 "Once this is done, if the application doesn't declare a winner, the game continues:"+
                 " another round is played with players giving words followed by another vote, repeated until a team wins the game."}
     ],
+};
+
+
+const playersSetup = {
+    
 };

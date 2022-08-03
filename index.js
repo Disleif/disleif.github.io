@@ -1,3 +1,6 @@
+let nbPlayers = 0;
+
+
 for (let card of document.getElementsByClassName("card")) {
   card.addEventListener("click", function handleClick() {
     card.removeEventListener("click", handleClick);
@@ -24,3 +27,5 @@ for (let card of document.getElementsByClassName("card")) {
     }, 1000);
   });
 }
+
+
